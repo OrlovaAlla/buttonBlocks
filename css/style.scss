@@ -1,0 +1,496 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+}
+/*--- Кнопка ---*/
+.map-calculator {    
+
+    &__tab-label {
+        width: 133px;
+        padding: 0 21px 0 12px; 
+        height: 41px;
+        background: #FFFFFF;
+        border: 1px solid #C4C4C4;
+        cursor: pointer;
+        box-sizing: border-box;
+        position: relative;
+        & a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__tab-label-icon {
+        margin: 0 15.5px 0 0;
+    }
+
+    &__tab-label-text {
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        color: #000000;
+    }
+
+    &__tab-input {
+        display: none;
+    }
+}
+
+.button-position {
+    display: flex;
+    align-items: center;
+}
+
+/*--- Блоки ---*/
+
+.search-result {
+    & a{
+        text-decoration: none;
+    }
+
+    &_nothing {
+        display: block;
+        padding-top: 39px;
+        padding-bottom: 52px;
+        text-align: center;
+        & .nothing-visible {
+            display: block;
+
+        }
+    }
+    &_nothing-p {
+        font-weight: 900;
+        font-size: 25px;
+        line-height: 29px;
+        text-align: center;
+        color: #200E32;
+    }
+
+    &_nothing-h2 {
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 29px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #225999;
+    }
+    &_nothing-button {
+        margin-top: 20px;
+        width: 339px;
+        height: 50px;
+        background: #F8991D;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 19px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+
+    &_something {
+        display: block;
+        padding-top: 29px;
+        padding-bottom: 85px;
+        & .something-visible {
+            display: block;
+
+        }
+    }
+
+    &_something-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &_something-message {
+        font-weight: 900;
+        font-size: 25px;
+        line-height: 29px;
+        color: #200E32; 
+        text-align: center;       
+    }
+    &_something-p {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        color: #969696;
+        margin-bottom: 18px;
+    }
+    &_something-block{
+        width: 100%;
+    }
+    &_something-element {
+        width: 100%;
+        height: 100px;
+        background: #FFFFFF;
+        border: 1px solid #C4C4C4;
+        box-sizing: border-box;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &_something-button {
+        margin-top: 20px;
+        width: 330px;
+        height: 50px;
+        background: #FCEFDF;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 19px;
+        text-transform: uppercase;
+        color: #F8991D;
+    }
+}
+/*--- Карточка - результат поиска ---*/
+.something-element {    
+
+    &_distance {
+        display: block;
+        width: 460px; /*426+17+17*/
+        padding: 22px 17px 16px;
+    }
+    &_distance-top {
+        display: flex;
+        justify-content: space-between;
+        & .distance-top {
+            &_time-start,
+            &_time-end {
+                font-style: normal;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 16px;
+                color: #200E32;
+                margin: 0;
+            }
+            &_time-interval{
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 16px;
+                color: #200E32;
+                margin: 0;
+            }
+        }
+    }
+    &_distance-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 13px;
+        
+        & .distance-center{
+            &_curcle {
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                border: 4px solid #F8991D;
+                box-sizing: border-box;
+            }
+            &_line{
+                width: 100%;
+                height: 3px;
+                background: #F8991D;
+            }
+        }  
+    }
+      &_distance-bottom {
+          display: flex;
+          justify-content: space-between;
+
+          & .distance-bottom {
+
+              &_point-start,
+              &_point-end {
+                  font-style: normal;
+                  font-weight: normal;
+                  font-size: 12px;
+                  line-height: 14px;
+                  color: #969696;
+                  margin: 0;
+              }
+          }
+      }
+
+    &_price {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    &_price-title {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        color: #200E32;
+        margin-bottom: 2px;
+    }
+    &_price-number{
+        font-style: normal;
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 29px;
+        color: #F8991D;
+    }
+
+
+
+    &_driver {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 38px 0 0;
+    }
+    &_driver-img {
+        border-radius: 50%;
+        width: 75px;
+        height: 75px;
+    }
+    &_driver-block {
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+    }
+    &_driver-name {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 19px;
+        color: #200E32;
+        padding-bottom: 8px;
+    }
+    &_driver-rating{
+        height: 20px;
+        min-width: 109;
+        color: #F8991D;
+        
+    }
+}
+
+
+/*---  Календарь ---*/
+
+#datepicker {
+    display: flex;
+    justify-content: center;
+}
+.ui-datepicker {
+    width: 21.6875em;
+ 
+}
+.ui-widget-header {
+    background: #FFFFFF;
+    border: none;
+}
+
+.ui-datepicker table {
+    font-size: 12px;
+    line-height: 15px;
+}
+.ui-state-default,
+.ui-widget-content .ui-state-default {
+    border: none;
+    background: #FFFFFF;
+    color: #000000;
+}
+.ui-datepicker td a{
+    padding: 1.25em 0.2em;
+    text-align: center;
+}
+.ui-state-active,
+.ui-widget-content .ui-state-active {
+    background: #F8991D;
+    box-shadow: 0px 0px 20px rgba(123, 97, 255, 0.2);
+    border-radius: 10px;
+    color: #FFFFFF;
+}
+
+
+
+/*------------- Мобилка -----------*/
+
+@media (max-width: 700px) {
+    /* Кнопка */
+    .map-calculator {
+
+        &__tab-label {
+            width: 54px;
+            padding: 0 15px;
+            height: 40px;
+
+        }
+
+        &__tab-label-icon {
+            margin: 0 0 0 0;
+        }
+
+        &__tab-label-text {
+            display: none;
+        }
+
+    }
+    .search-result {
+        
+        &_nothing {
+
+            padding-top: 0px;
+            padding-bottom: 20px;
+        }
+
+        &_nothing-p {
+            font-size: 18px;
+            line-height: 21px;
+        }
+
+        &_nothing-h2 {
+            font-size: 18px;
+            line-height: 21px;
+        }
+
+        &_nothing-button {
+            width: 280px;
+        }
+
+        &_something {
+
+            padding-top: 0px;
+            padding-bottom: 57px;
+           
+        }
+
+
+        &_something-message {
+            font-size: 18px;
+            line-height: 21px;
+        }
+
+        &_something-p {
+            margin-bottom: 20px;
+        }
+
+        &_something-block {
+            width: 100%;
+        }
+
+        &_something-element {
+            height: 273px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 12px;
+        }
+
+        &_something-button {
+            margin-top: 30px;
+            width: 300px;
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+
+    /*--- Карточка - результат поиска ---*/
+    .something-element {
+
+
+        &_distance {
+            display: block;
+            width: 100%;
+            padding: 22px 0 12px;
+        }
+
+        &_distance-top {
+            display: flex;
+            justify-content: space-between;
+
+            & .distance-top {
+
+                &_time-start,
+                &_time-end {
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 14px;
+                    line-height: 16px;
+                    color: #200E32;
+                    margin: 0;
+                }
+
+                &_time-interval {
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 16px;
+                    color: #200E32;
+                    margin: 0;
+                }
+            }
+        }
+
+        &_distance-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px 13px;
+
+            & .distance-center {
+                &_curcle {
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 50%;
+                    border: 4px solid #F8991D;
+                    box-sizing: border-box;
+                }
+
+                &_line {
+                    width: 100%;
+                    height: 3px;
+                    background: #F8991D;
+                }
+            }
+        }
+        &_price {
+            padding-bottom: 26px;
+        }
+
+        
+        &_driver {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 14px 0 0;
+        }
+
+        &_driver-img {
+            border-radius: 50%;
+            width: 75px;
+            height: 75px;
+        }
+
+
+        
+       
+    }
+
+
+
+
+}
+
+
+
+
+
+
