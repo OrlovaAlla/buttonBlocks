@@ -76,6 +76,7 @@ body {
         line-height: 29px;
         text-align: center;
         color: #200E32;
+        padding-bottom: 30px;
     }
 
     &_nothing-h2 {
@@ -85,6 +86,7 @@ body {
         text-align: center;
         text-transform: uppercase;
         color: #225999;
+        padding-bottom: 20px;
     }
     &_nothing-button {
         margin-top: 20px;
@@ -291,37 +293,6 @@ body {
     display: flex;
     justify-content: center;
 }
-.ui-datepicker {
-    width: 21.6875em;
- 
-}
-.ui-widget-header {
-    background: #FFFFFF !important; 
-    border: none !important;
-}
-
-.ui-datepicker table {
-    font-size: 12px !important;
-    line-height: 15px !important;
-}
-.ui-state-default,
-.ui-widget-content .ui-state-default {
-    border: none !important;
-    background: #FFFFFF !important;
-    color: #000000 !important;
-}
-.ui-datepicker td a{
-    padding: 1em 0.2em !important;
-    text-align: center !important;
-}
-.ui-state-active,
-.ui-widget-content .ui-state-active {
-    background: #F8991D !important;
-    box-shadow: 0px 0px 20px rgba(123, 97, 255, 0.2) !important;
-    border-radius: 10px !important;
-    color: #FFFFFF !important;
-}
-
 
 
 /*------------- Мобилка -----------*/
@@ -362,6 +333,7 @@ body {
         &_nothing-h2 {
             font-size: 18px;
             line-height: 21px;
+            padding-bottom: 10px;
         }
 
         &_nothing-button {
