@@ -511,6 +511,9 @@ body {
     width: 75px;
     height: 75px;
   }
+}
+
+@media (max-width: 320px) {
   /*Календарь*/
   .datepicker {
     width: 100%;

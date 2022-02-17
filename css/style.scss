@@ -477,20 +477,26 @@ body {
        
     }
 
+    
+
+}
+@media (max-width: 320px) {
+
     /*Календарь*/
     .datepicker {
         width: 100%;
     }
+
     .datepicker--nav {
         padding: 11px 8px 0;
     }
+
     .datepicker--content {
         padding: 2px 8px 20px;
     }
 
 
 }
-
 
 
 
