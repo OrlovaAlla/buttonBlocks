@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!--jquery-->
-    <link rel="stylesheet" href="css/calendar.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <!--css-->
+    <link rel="stylesheet" href="css/datepicker.css">
     <link rel="stylesheet" href="css/style.css">
+
     <title></title>
 </head>
 <body>
+    <div class="container-preliminary">
+
     <!-- Кнопка Попутчик -->
     <div class="map-calculator__tabs">
         <label class="map-calculator__tab-label button-position" for="tw5">
@@ -57,7 +58,7 @@
         <div class="search-result_nothing">
             <p class="search-result_nothing-p">К сожалению, на ближайшие 3 дня поездок не найдено!</p>
             <h2 class="search-result_nothing-h2">Выберите дату Поездки</h2>
-            <div id="datepicker"></div>
+            <div class="datepicker-here"></div>
 
             <input type="hidden" id="datepicker_value" value="15.02.2022">
             
@@ -69,12 +70,13 @@
                 <div class="search-result_something-message">Попутки и автобусы по маршруту Саков - Оленовка на 13.01.2022</div>
                 <p class="search-result_something-p">Для брони кликните на карточку поездки!</p>
                 <div class="search-result_something-block">
+
                     <div class="search-result_something-element something-element">
                         <div class="something-element_distance">
                             <div class="something-element_distance-top distance-top">
-                                <a class="distance-top_time-start" href="#">11</a>
-                                <a class="distance-top_time-interval" href="#">111</a>
-                                <a class="distance-top_time-end" href="#">111</a>
+                                <a class="distance-top_time-start" href="#">11:00</a>
+                                <a class="distance-top_time-interval" href="#">2ч 12мин</a>
+                                <a class="distance-top_time-end" href="#">13:12</a>
                             </div>
                             <div class="something-element_distance-center distance-center">
                                 <div class="distance-center_curcle"></div>
@@ -82,20 +84,148 @@
                                 <div class="distance-center_curcle"></div>
                             </div>
                             <div class="something-element_distance-bottom distance-bottom">
-                                <a class="distance-bottom_point-start" href="#">aaaa</a>
-                                <a class="distance-bottom_point-end" href="#">aaaa</a>
+                                <a class="distance-bottom_point-start" href="#">Саков</a>
+                                <a class="distance-bottom_point-end" href="#">Оленовка</a>
+                            </div>
+                    
+                        </div>
+                        <div class="something-element_price">
+                            <a class="something-element_price-title" href="#">стоимость</a>
+                            <a class="something-element_price-number" href="#">500 руб</a>
+                        </div>
+                        <div class="something-element_driver">
+                            <a class="something-element_driver-a-img" href="#"><img class="something-element_driver-img"
+                                    src="img/examle.jpg" alt="photo"></a>
+                            <div class="something-element_driver-block">
+                                <a class="something-element_driver-name" href="#">Евгений</a>
+                                <a class="something-element_driver-rating" href="#">&#9733;&#9733;&#9733;&#9733;&#9733;</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search-result_something-element something-element">
+                        <div class="something-element_distance">
+                            <div class="something-element_distance-top distance-top">
+                                <a class="distance-top_time-start" href="#">11:00</a>
+                                <a class="distance-top_time-interval" href="#">3ч 00мин</a>
+                                <a class="distance-top_time-end" href="#">14:00</a>
+                            </div>
+                            <div class="something-element_distance-center distance-center">
+                                <div class="distance-center_curcle"></div>
+                                <div class="distance-center_line"></div>
+                                <div class="distance-center_curcle"></div>
+                            </div>
+                            <div class="something-element_distance-bottom distance-bottom">
+                                <a class="distance-bottom_point-start" href="#">Саков</a>
+                                <a class="distance-bottom_point-end" href="#">Оленовка</a>
                             </div>
 
                         </div>
                         <div class="something-element_price">
                             <a class="something-element_price-title" href="#">стоимость</a>
-                            <a class="something-element_price-number" href="#">500</a>
+                            <a class="something-element_price-number" href="#">500 руб</a>
                         </div>
                         <div class="something-element_driver">
                             <a  class="something-element_driver-a-img" href="#"><img class="something-element_driver-img" src="img/examle.jpg" alt="photo"></a>
                             <div class="something-element_driver-block">
-                                <a class="something-element_driver-name" href="#">Евгений</a>
-                                <a class="something-element_driver-rating" href="#">вап</a>
+                                <a class="something-element_driver-name" href="#">Максим</a>
+                                <a class="something-element_driver-rating" href="#">&#9733;&#9733;&#9733;&#9733;&#9733;</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search-result_something-element something-element">
+                        <div class="something-element_distance">
+                            <div class="something-element_distance-top distance-top">
+                                <a class="distance-top_time-start" href="#">13:00</a>
+                                <a class="distance-top_time-interval" href="#">5ч 12мин</a>
+                                <a class="distance-top_time-end" href="#">15:12</a>
+                            </div>
+                            <div class="something-element_distance-center distance-center">
+                                <div class="distance-center_curcle"></div>
+                                <div class="distance-center_line"></div>
+                                <div class="distance-center_curcle"></div>
+                            </div>
+                            <div class="something-element_distance-bottom distance-bottom">
+                                <a class="distance-bottom_point-start" href="#">Саков</a>
+                                <a class="distance-bottom_point-end" href="#">Оленовка</a>
+                            </div>
+                    
+                        </div>
+                        <div class="something-element_price">
+                            <a class="something-element_price-title" href="#">стоимость</a>
+                            <a class="something-element_price-number" href="#">670 руб</a>
+                        </div>
+                        <div class="something-element_driver">
+                            <a class="something-element_driver-a-img" href="#"><img class="something-element_driver-img"
+                                    src="img/examle.jpg" alt="photo"></a>
+                            <div class="something-element_driver-block">
+                                <a class="something-element_driver-name" href="#">Александр</a>
+                                <a class="something-element_driver-rating" href="#">&#9733;&#9733;&#9733;&#9733;&#9733;</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search-result_something-element something-element">
+                        <div class="something-element_distance">
+                            <div class="something-element_distance-top distance-top">
+                                <a class="distance-top_time-start" href="#">13:00</a>
+                                <a class="distance-top_time-interval" href="#">2ч 00мин</a>
+                                <a class="distance-top_time-end" href="#">17:00</a>
+                            </div>
+                            <div class="something-element_distance-center distance-center">
+                                <div class="distance-center_curcle"></div>
+                                <div class="distance-center_line"></div>
+                                <div class="distance-center_curcle"></div>
+                            </div>
+                            <div class="something-element_distance-bottom distance-bottom">
+                                <a class="distance-bottom_point-start" href="#">Саков</a>
+                                <a class="distance-bottom_point-end" href="#">Оленовка</a>
+                            </div>
+                    
+                        </div>
+                        <div class="something-element_price">
+                            <a class="something-element_price-title" href="#">стоимость</a>
+                            <a class="something-element_price-number" href="#">680 руб</a>
+                        </div>
+                        <div class="something-element_driver">
+                            <a class="something-element_driver-a-img" href="#"><img class="something-element_driver-img"
+                                    src="img/examle.jpg" alt="photo"></a>
+                            <div class="something-element_driver-block">
+                                <a class="something-element_driver-name" href="#">Юрий</a>
+                                <a class="something-element_driver-rating" href="#">&#9733;&#9733;&#9733;&#9733;&#9733;</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search-result_something-element something-element">
+                        <div class="something-element_distance">
+                            <div class="something-element_distance-top distance-top">
+                                <a class="distance-top_time-start" href="#">14:00</a>
+                                <a class="distance-top_time-interval" href="#">2ч 35мин</a>
+                                <a class="distance-top_time-end" href="#">18:35</a>
+                            </div>
+                            <div class="something-element_distance-center distance-center">
+                                <div class="distance-center_curcle"></div>
+                                <div class="distance-center_line"></div>
+                                <div class="distance-center_curcle"></div>
+                            </div>
+                            <div class="something-element_distance-bottom distance-bottom">
+                                <a class="distance-bottom_point-start" href="#">Саков</a>
+                                <a class="distance-bottom_point-end" href="#">Оленовка</a>
+                            </div>
+                    
+                        </div>
+                        <div class="something-element_price">
+                            <a class="something-element_price-title" href="#">стоимость</a>
+                            <a class="something-element_price-number" href="#">700 руб</a>
+                        </div>
+                        <div class="something-element_driver">
+                            <a class="something-element_driver-a-img" href="#"><img class="something-element_driver-img"
+                                    src="img/examle.jpg" alt="photo"></a>
+                            <div class="something-element_driver-block">
+                                <a class="something-element_driver-name" href="#">Павел</a>
+                                <a class="something-element_driver-rating" href="#">&#9733;&#9733;&#9733;&#9733;&#9733;</a>
                             </div>
                         </div>
                     </div>
@@ -109,12 +239,12 @@
     </section>
 
    
-
+</div>
     
     <!--jquery-->
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <script src="js/datepicker.js"></script>
     <script src="poputchick.js"></script>
 </body>
 </html>

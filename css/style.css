@@ -12,6 +12,12 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.container-preliminary {
+  max-width: 887px;
+  padding: 20px 0;
+  margin: 0 auto;
+}
+
 /*--- Кнопка ---*/
 .map-calculator__tab-label {
   width: 133px;
@@ -152,6 +158,10 @@ body {
 
 .search-result_something-block {
   width: 100%;
+}
+
+.search-result_something-element:nth-child(-n+4) {
+  margin-bottom: 20px;
 }
 
 .search-result_something-element {
@@ -339,12 +349,13 @@ body {
 
 .something-element_driver-rating {
   height: 20px;
-  min-width: 109;
   color: #F8991D;
+  font-size: 20px;
+  line-height: 1;
 }
 
 /*---  Календарь ---*/
-#datepicker {
+.datepicker-here {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -355,6 +366,9 @@ body {
 
 /*------------- Мобилка -----------*/
 @media (max-width: 700px) {
+  .container-preliminary {
+    max-width: 100%;
+  }
   /* Кнопка */
   .map-calculator__tab-label {
     width: 54px;
@@ -396,6 +410,7 @@ body {
   }
   .search-result_something-block {
     width: 100%;
+    padding: 0 10px;
   }
   .search-result_something-element {
     height: 273px;
@@ -495,5 +510,15 @@ body {
     border-radius: 50%;
     width: 75px;
     height: 75px;
+  }
+  /*Календарь*/
+  .datepicker {
+    width: 100%;
+  }
+  .datepicker--nav {
+    padding: 11px 8px 0;
+  }
+  .datepicker--content {
+    padding: 2px 8px 20px;
   }
 }

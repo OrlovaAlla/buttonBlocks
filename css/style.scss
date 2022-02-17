@@ -9,6 +9,11 @@ html,
 body {
     font-family: 'Roboto', sans-serif;
 }
+.container-preliminary{
+    max-width: 887px;
+    padding: 20px 0;
+    margin: 0 auto;    
+}
 /*--- Кнопка ---*/
 .map-calculator {    
 
@@ -136,6 +141,10 @@ body {
     &_something-block{
         width: 100%;
     }
+    &_something-element:nth-child(-n+4) {
+        margin-bottom: 20px;
+        
+    }
     &_something-element {
         width: 100%;
         height: 100px;
@@ -146,6 +155,7 @@ body {
         display: flex;
         justify-content: space-between;
     }
+    
     &_something-button {
         margin-top: 20px;
         width: 330px;
@@ -279,9 +289,10 @@ body {
         padding-bottom: 8px;
     }
     &_driver-rating{
-        height: 20px;
-        min-width: 109;
+        height: 20px;        
         color: #F8991D;
+        font-size: 20px;
+        line-height: 1;
         
     }
 }
@@ -289,15 +300,19 @@ body {
 
 /*---  Календарь ---*/
 
-#datepicker {
+.datepicker-here {
     display: flex;
     justify-content: center;
 }
 
-
 /*------------- Мобилка -----------*/
 
 @media (max-width: 700px) {
+
+    .container-preliminary {
+        max-width: 100%;
+
+    }
     /* Кнопка */
     .map-calculator {
 
@@ -359,6 +374,7 @@ body {
 
         &_something-block {
             width: 100%;
+            padding: 0 10px;
         }
 
         &_something-element {
@@ -461,7 +477,16 @@ body {
        
     }
 
-
+    /*Календарь*/
+    .datepicker {
+        width: 100%;
+    }
+    .datepicker--nav {
+        padding: 11px 8px 0;
+    }
+    .datepicker--content {
+        padding: 2px 8px 20px;
+    }
 
 
 }

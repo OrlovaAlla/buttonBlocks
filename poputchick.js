@@ -1,38 +1,31 @@
 $(document).ready(function(){
 
 
-
-
-
 /* Обработчик выбранной даты */
 $(function(){
-	$("#datepicker").datepicker({
+	$(".datepicker-here").datepicker({
 		onSelect: function(date){
 			$('#datepicker_value').val(date)
 		}
 	});
-	$("#datepicker").datepicker("setDate", $('#datepicker_value').val());
+	$(".datepicker-here").datepicker("setDate", $('#datepicker_value').val());
+
 });
 
 /* Локализация datepicker */
-$.datepicker.regional['ru'] = {
-	closeText: 'Закрыть',
-	prevText: 'Предыдущий',
-	nextText: 'Следующий',
-	currentText: 'Сегодня',
-	monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
-	monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'],
-	dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
-	dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
-	dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
-	weekHeader: 'Не',
-	dateFormat: 'Y-m-d',
-	firstDay: 1,
-	isRTL: false,
-	showMonthAfterYear: false,
-	yearSuffix: ''
+
+$.fn.datepicker.language['ru'] =  {
+    days: ['Воскресенье','Понедельник','Вторник','Среда','Четверг','Пятница','Суббота'],
+    daysShort: ['Вос','Пон','Вто','Сре','Чет','Пят','Суб'],
+    daysMin: ['Su','Mo','Tu','We','Th','Fr','Sa'],
+    months: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+    monthsShort: ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'],
+    today: 'Сегодня',
+    clear: 'Очистить',
+    dateFormat: 'yyyy.mm.dd',
+    timeFormat: 'hh:ii',
+    firstDay: 1
 };
-$.datepicker.setDefaults($.datepicker.regional['ru']);
 
 
 });
