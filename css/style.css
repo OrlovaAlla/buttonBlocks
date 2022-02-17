@@ -111,6 +111,7 @@ body {
   line-height: 19px;
   text-transform: uppercase;
   color: #FFFFFF;
+  border: none;
 }
 
 .search-result_something {
@@ -191,6 +192,7 @@ body {
   line-height: 19px;
   text-transform: uppercase;
   color: #F8991D;
+  border: none;
 }
 
 /*--- Карточка - результат поиска ---*/
